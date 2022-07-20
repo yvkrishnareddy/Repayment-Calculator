@@ -29,7 +29,7 @@ public class RepaymentCalcDef extends BasePage{
 	}
 
 	@When("User clicks on Home loan repayments calculator {string} link")
-	public void user_clicks_on_home_loan_repayments_calculator_link(String string) throws InterruptedException{
+	public void user_clicks_on_home_loan_repayments_calculator_link(String string) {
 		RepaymentCalcPage.clickOnCalculateNow(string);
 		driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
 	}
@@ -105,5 +105,10 @@ public class RepaymentCalcDef extends BasePage{
 		Assert.assertTrue(totLoanRePay.equals(string1));
 		String totInterestCharged = RepaymentCalcPage.getTotalInterestCharged();
 		Assert.assertTrue(totInterestCharged.equals(string2));
+	}
+
+	@Then("User validate total loan repayment and total interest charged")
+	public void user_validate_total_loan_repayment_and_total_interest_charged() {
+
 	}
 }

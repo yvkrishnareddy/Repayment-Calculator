@@ -12,6 +12,6 @@ import io.cucumber.junit.CucumberOptions;
 		plugin = {"com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:"},
 		monochrome = true)
 
-public class SmokeRunner {
+public class TestRunner {
 
 }

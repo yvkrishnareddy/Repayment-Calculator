@@ -1,4 +1,4 @@
-Feature: Commbank - Owner Occupied
+Feature: Commbank - Owner occupied
 
   @Test1
   Scenario Outline: Home Loan repayment calculator - Owner occupied (principal and interest)
@@ -12,7 +12,7 @@ Feature: Commbank - Owner Occupied
 
     Examples:
       | LoanAmount | Term | Repayment Type        | With a  | Expected Total loan repayments | Expected Total interest charged |
-      |      45000 |   30 | Interest only 1 year  | 7774123 | $67,191                        | $22,191                         |
-     # |      65000 |   10 | Interest only 3 years |       1 | $89,234                        | $24,234                         |
-     # |      43000 |   20 | Interest only 2 years |       4 | $68,977                        | $25,977                         |
-     # |      29000 |   10 | Interest only 5 years |       7 | $43,089                        | $14,089                         |
+      |      45000 |   30 | Interest only 1 year  | 7774123 | $71,620                        | $26,620                         |
+      |      65000 |   10 | Interest only 3 years |       1 | $91,506                        | $26,506                         |
+      |      43000 |   20 | Interest only 2 years |       4 | $71,468                        | $28,468                         |
+      |      29000 |   10 | Interest only 5 years |       7 | $43,487                        | $14,48		                       |

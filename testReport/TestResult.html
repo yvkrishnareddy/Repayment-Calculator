@@ -35,7 +35,7 @@
 <a href="#"><span class="badge badge-primary">Loan Repayment calculator Test Report</span></a>
 </li>
 <li class="m-r-10">
-<a href="#"><span class="badge badge-primary">Jul 12, 2022 07:49:24 PM</span></a>
+<a href="#"><span class="badge badge-primary">Jul 20, 2022 03:47:52 PM</span></a>
 </li>
 </ul>
 </div>
@@ -57,6 +57,11 @@
 <span class="ico"><i class="fa fa-tag"></i></span>
 </a>
 </li>
+<li class="nav-item dropdown" onclick="toggleView('exception-view')">
+<a id="nav-exception" class="dropdown-toggle" href="#">
+<span class="ico"><i class="fa fa-bug"></i></span>
+</a>
+</li>
 </ul>
 </div>
 </div>      <div class="vcontainer">
@@ -66,25 +71,25 @@
 <div class="col-md-3">
 <div class="card"><div class="card-body">
 <p class="m-b-0">Started</p>
-<h3>Jul 12, 2022 07:49:24 PM</h3>
+<h3>Jul 20, 2022 03:47:52 PM</h3>
 </div></div>
 </div>
 <div class="col-md-3">
 <div class="card"><div class="card-body">
 <p class="m-b-0">Ended</p>
-<h3>Jul 12, 2022 07:51:11 PM</h3>
+<h3>Jul 20, 2022 03:54:10 PM</h3>
 </div></div>
 </div>
 <div class="col-md-3">
 <div class="card"><div class="card-body">
 <p class="m-b-0 text-pass">Features Passed</p>
-<h3>3</h3>
+<h3>2</h3>
 </div></div>
 </div>
 <div class="col-md-3">
 <div class="card"><div class="card-body">
 <p class="m-b-0 text-fail">Features Failed</p>
-<h3>0</h3>
+<h3>1</h3>
 </div></div>
 </div>
 </div>
@@ -100,12 +105,12 @@
 </div>
 </div>
 <div class="card-footer">
-<div><small data-tooltip='100%'>
-<b>3</b> features passed
+<div><small data-tooltip='66%'>
+<b>2</b> features passed
 </small>
 </div>
 <div>
-<small data-tooltip='0%'><b>0</b> features failed,
+<small data-tooltip='33%'><b>1</b> features failed,
 <b>0</b> skipped, <b data-tooltip='0%'>0</b> others
 </small>
 </div>
@@ -123,9 +128,9 @@
 </div>
 </div>
 <div class="card-footer">
-<div><small data-tooltip='100%'><b>3</b> scenarios passed</small></div>
+<div><small data-tooltip='90%'><b>9</b> scenarios passed</small></div>
 <div>
-<small data-tooltip='0%'><b>0</b> scenarios failed,
+<small data-tooltip='10%'><b>1</b> scenarios failed,
 <b>0</b> skipped, <b data-tooltip='%'>0</b> others
 </small>
 </div>
@@ -143,9 +148,9 @@
 </div>
 </div>
 <div class="card-footer">
-<div><small data-tooltip='100%'><b>23</b> steps passed</small></div>
+<div><small data-tooltip='98%'><b>73</b> steps passed</small></div>
 <div>
-<small data-tooltip='0%'><b>0</b> steps failed,
+<small data-tooltip='1%'><b>1</b> steps failed,
 <b>0</b> skipped, <b data-tooltip='%'>0</b> others
 </small>
 </div>
@@ -162,7 +167,7 @@
 </div></div>
 <script>
 var timeline = {
-"Commbank - InputInterestRate":36.676,"Commbank - Investment":35.079,"Commbank - Owner Occupied":34.35
+"CommBank - Repayment Calculator":88.833,"CommBank - Repayment Calculator - Investment":159.727,"Commbank - Owner occupied":128.502
 };
 </script>
 <div class="row">
@@ -173,7 +178,15 @@ var timeline = {
 <thead><tr class="bg-gray"><th>Name</th><th>Passed</th><th>Failed</th><th>Skipped</th><th>Others</th><th>Passed %</th></tr></thead><tbody>
 <tr>
 <td>@Test1</td>
+<td>3</td>
 <td>1</td>
+<td>0</td>
+<td>0</td>
+<td>75%</td>
+</tr>
+<tr>
+<td>@Test3</td>
+<td>2</td>
 <td>0</td>
 <td>0</td>
 <td>0</td>
@@ -181,15 +194,7 @@ var timeline = {
 </tr>
 <tr>
 <td>@Test2</td>
-<td>1</td>
-<td>0</td>
-<td>0</td>
-<td>0</td>
-<td>100%</td>
-</tr>
-<tr>
-<td>@Test3</td>
-<td>1</td>
+<td>4</td>
 <td>0</td>
 <td>0</td>
 <td>0</td>
@@ -230,19 +235,19 @@ var timeline = {
 <script>
 var statusGroup = {
 parentCount: 5,
-passParent: 3,
-failParent: 0,
+passParent: 2,
+failParent: 1,
 warningParent: 0,
 skipParent: 0,
 childCount: 5,
-passChild: 3,
-failChild: 0,
+passChild: 9,
+failChild: 1,
 warningChild: 0,
 skipChild: 0,
 infoChild: 0,
 grandChildCount: 5,
-passGrandChild: 23,
-failGrandChild: 0,
+passGrandChild: 73,
+failGrandChild: 1,
 warningGrandChild: 0,
 skipGrandChild: 0,
 infoGrandChild: 0,
@@ -259,6 +264,7 @@ eventsCount: 5,
 <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-exclamation-circle"></i></a>
 <ul id="status-toggle" class="dropdown-menu dropdown-md p-v-0">
 <a class="dropdown-item" status="pass" href="#"><span>Pass</span><span class="status success"></span></a>
+<a class="dropdown-item" status="fail" href="#"><span>Fail</span><span class="status danger"></span></a>
 <div class="dropdown-divider"></div>
 <a status="clear" class="dropdown-item" href="#"><span>Clear</span><span class="pull-right"><i class="fa fa-close"></i></span></a>
 </ul>
@@ -266,7 +272,7 @@ eventsCount: 5,
 <li class="dropdown">
 <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-tag"></i></a>
 <ul id="tag-toggle" class="dropdown-menu dropdown-md p-v-0">
-<a class="dropdown-item" href="#">@Test1</a><a class="dropdown-item" href="#">@Test2</a><a class="dropdown-item" href="#">@Test3</a>
+<a class="dropdown-item" href="#">@Test1</a><a class="dropdown-item" href="#">@Test3</a><a class="dropdown-item" href="#">@Test2</a>
 </ul>
 </li>
 </ul>
@@ -277,9 +283,9 @@ eventsCount: 5,
           tag=""
           device="">
           <div class="test-detail">
-            <p class="name">Commbank - InputInterestRate</p>
+            <p class="name">CommBank - Repayment Calculator</p>
             <p class="text-sm">
-              <span>7:49:25 PM</span> / <span>00:00:36:676</span>
+              <span>3:47:52 PM</span> / <span>00:01:28:833</span>
               <span class="badge pass-bg log float-right">Pass</span>
             </p>
           </div>
@@ -287,10 +293,10 @@ eventsCount: 5,
 <div class="detail-head">
 <div class="p-v-10">
 <div class="info">
-<h5 class="test-status text-pass">Commbank - InputInterestRate</h5>
-<span class='badge badge-success'>07.12.2022 7:49:25 PM</span>
-<span class='badge badge-danger'>07.12.2022 7:50:02 PM</span>
-<span class='badge badge-default'>00:00:36:676</span>
+<h5 class="test-status text-pass">CommBank - Repayment Calculator</h5>
+<span class='badge badge-success'>07.20.2022 3:47:52 PM</span>
+<span class='badge badge-danger'>07.20.2022 3:49:21 PM</span>
+<span class='badge badge-default'>00:01:28:833</span>
 &middot; <span class='uri-anchor badge badge-default'>#test-id=1</span>
 <span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
 <span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
@@ -360,19 +366,73 @@ eventsCount: 5,
                   </div>
               </div>
             </div>
+            <div class="card-body l1">
+              <div class="card-header">
+                <div class="card-title outline-child">
+                  <div class="node" id="15"><span class="badge log pass-bg mr-2">Pass</span>Home Loan repayment calculator - Input Interest Rate</div>
+                </div>
+              </div>
+              <div class="card-body mt-3 collapse">
+                  <div class="step pass-bg">
+                    <span>Given User is on commbank site</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>When User clicks on "Home loans" tab</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And User clicks on "Calculators & tools" link</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And User clicks on Home loan repayments calculator "Calculate now" link</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And User enters "40000" and "30" and "Interest only 2 years" for Home Loan repayment</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And User clicks on Input interest rate</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And User enters "3" an interest rate in text field</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And User clicks on calculate button</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Then User validate "$61,572" and "$21,572" details</span>
+      <div>
+      </div>
+                  </div>
+              </div>
+            </div>
         </div>
   </div>
 </div>
           </div>
         </li>
-        <li class="test-item"  status="pass" test-id="15"
+        <li class="test-item"  status="pass" test-id="27"
           author=""
           tag=""
           device="">
           <div class="test-detail">
-            <p class="name">Commbank - Investment</p>
+            <p class="name">CommBank - Repayment Calculator - Investment</p>
             <p class="text-sm">
-              <span>7:50:02 PM</span> / <span>00:00:35:079</span>
+              <span>3:49:21 PM</span> / <span>00:02:39:727</span>
               <span class="badge pass-bg log float-right">Pass</span>
             </p>
           </div>
@@ -380,11 +440,11 @@ eventsCount: 5,
 <div class="detail-head">
 <div class="p-v-10">
 <div class="info">
-<h5 class="test-status text-pass">Commbank - Investment</h5>
-<span class='badge badge-success'>07.12.2022 7:50:02 PM</span>
-<span class='badge badge-danger'>07.12.2022 7:50:37 PM</span>
-<span class='badge badge-default'>00:00:35:079</span>
-&middot; <span class='uri-anchor badge badge-default'>#test-id=15</span>
+<h5 class="test-status text-pass">CommBank - Repayment Calculator - Investment</h5>
+<span class='badge badge-success'>07.20.2022 3:49:21 PM</span>
+<span class='badge badge-danger'>07.20.2022 3:52:01 PM</span>
+<span class='badge badge-default'>00:02:39:727</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=27</span>
 <span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
 <span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
 </div>
@@ -395,14 +455,14 @@ eventsCount: 5,
   <div class="card">
     <div class="card-header" role="tab">
       <div class="card-title">
-        <div class="node" id="16"><span class="badge log pass-bg mr-2">Pass</span>Home Loan repayment calculator - Investment (principal and interest)</div>
+        <div class="node" id="28"><span class="badge log pass-bg mr-2">Pass</span>Home Loan repayment calculator - Investment (principal and interest)</div>
       </div>
     </div>
         <div class="scenario_outline collapse">
             <div class="card-body l1">
               <div class="card-header">
                 <div class="card-title outline-child">
-                  <div class="node" id="17"><span class="badge log pass-bg mr-2">Pass</span>Home Loan repayment calculator - Investment (principal and interest)</div>
+                  <div class="node" id="29"><span class="badge log pass-bg mr-2">Pass</span>Home Loan repayment calculator - Investment (principal and interest)</div>
                 </div>
               </div>
               <div class="card-body mt-3 collapse">
@@ -437,7 +497,139 @@ eventsCount: 5,
       </div>
                   </div>
                   <div class="step pass-bg">
-                    <span>Then User validate "$67,994" and "$17,994" details</span>
+                    <span>Then User validate "$71,124" and "$21,124" details</span>
+      <div>
+      </div>
+                  </div>
+              </div>
+            </div>
+            <div class="card-body l1">
+              <div class="card-header">
+                <div class="card-title outline-child">
+                  <div class="node" id="39"><span class="badge log pass-bg mr-2">Pass</span>Home Loan repayment calculator - Investment (principal and interest)</div>
+                </div>
+              </div>
+              <div class="card-body mt-3 collapse">
+                  <div class="step pass-bg">
+                    <span>Given User is on commbank site</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>When User clicks on "Home loans" tab</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And User clicks on "Calculators & tools" link</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And User clicks on Home loan repayments calculator "Calculate now" link</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And User enters "40000" and "25" and "Interest only 2 years" and "8" for Home Loan repayment</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And User clicks on calculate button</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Then User validate "$81,682" and "$41,682" details</span>
+      <div>
+      </div>
+                  </div>
+              </div>
+            </div>
+            <div class="card-body l1">
+              <div class="card-header">
+                <div class="card-title outline-child">
+                  <div class="node" id="49"><span class="badge log pass-bg mr-2">Pass</span>Home Loan repayment calculator - Investment (principal and interest)</div>
+                </div>
+              </div>
+              <div class="card-body mt-3 collapse">
+                  <div class="step pass-bg">
+                    <span>Given User is on commbank site</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>When User clicks on "Home loans" tab</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And User clicks on "Calculators & tools" link</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And User clicks on Home loan repayments calculator "Calculate now" link</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And User enters "60000" and "30" and "Interest only 3 years" and "10" for Home Loan repayment</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And User clicks on calculate button</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Then User validate "$127,901" and "$67,901" details</span>
+      <div>
+      </div>
+                  </div>
+              </div>
+            </div>
+            <div class="card-body l1">
+              <div class="card-header">
+                <div class="card-title outline-child">
+                  <div class="node" id="59"><span class="badge log pass-bg mr-2">Pass</span>Home Loan repayment calculator - Investment (principal and interest)</div>
+                </div>
+              </div>
+              <div class="card-body mt-3 collapse">
+                  <div class="step pass-bg">
+                    <span>Given User is on commbank site</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>When User clicks on "Home loans" tab</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And User clicks on "Calculators & tools" link</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And User clicks on Home loan repayments calculator "Calculate now" link</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And User enters "55000" and "20" and "Interest only 5 years" and "14" for Home Loan repayment</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And User clicks on calculate button</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Then User validate "$101,475" and "$46,475" details</span>
       <div>
       </div>
                   </div>
@@ -448,26 +640,26 @@ eventsCount: 5,
 </div>
           </div>
         </li>
-        <li class="test-item"  status="pass" test-id="27"
+        <li class="test-item"  status="fail" test-id="69"
           author=""
           tag=""
           device="">
           <div class="test-detail">
-            <p class="name">Commbank - Owner Occupied</p>
+            <p class="name">Commbank - Owner occupied</p>
             <p class="text-sm">
-              <span>7:50:37 PM</span> / <span>00:00:34:350</span>
-              <span class="badge pass-bg log float-right">Pass</span>
+              <span>3:52:01 PM</span> / <span>00:02:08:502</span>
+              <span class="badge fail-bg log float-right">Fail</span>
             </p>
           </div>
           <div class="test-contents d-none">
 <div class="detail-head">
 <div class="p-v-10">
 <div class="info">
-<h5 class="test-status text-pass">Commbank - Owner Occupied</h5>
-<span class='badge badge-success'>07.12.2022 7:50:37 PM</span>
-<span class='badge badge-danger'>07.12.2022 7:51:11 PM</span>
-<span class='badge badge-default'>00:00:34:350</span>
-&middot; <span class='uri-anchor badge badge-default'>#test-id=27</span>
+<h5 class="test-status text-fail">Commbank - Owner occupied</h5>
+<span class='badge badge-success'>07.20.2022 3:52:01 PM</span>
+<span class='badge badge-danger'>07.20.2022 3:54:10 PM</span>
+<span class='badge badge-default'>00:02:08:502</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=69</span>
 <span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
 <span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
 </div>
@@ -478,14 +670,14 @@ eventsCount: 5,
   <div class="card">
     <div class="card-header" role="tab">
       <div class="card-title">
-        <div class="node" id="28"><span class="badge log pass-bg mr-2">Pass</span>Home Loan repayment calculator - Owner occupied (principal and interest)</div>
+        <div class="node" id="70"><span class="badge log fail-bg mr-2">Fail</span>Home Loan repayment calculator - Owner occupied (principal and interest)</div>
       </div>
     </div>
-        <div class="scenario_outline collapse">
+        <div class="scenario_outline ">
             <div class="card-body l1">
               <div class="card-header">
                 <div class="card-title outline-child">
-                  <div class="node" id="29"><span class="badge log pass-bg mr-2">Pass</span>Home Loan repayment calculator - Owner occupied (principal and interest)</div>
+                  <div class="node" id="71"><span class="badge log pass-bg mr-2">Pass</span>Home Loan repayment calculator - Owner occupied (principal and interest)</div>
                 </div>
               </div>
               <div class="card-body mt-3 collapse">
@@ -520,8 +712,148 @@ eventsCount: 5,
       </div>
                   </div>
                   <div class="step pass-bg">
-                    <span>Then User validate "$67,191" and "$22,191" details</span>
+                    <span>Then User validate "$71,620" and "$26,620" details</span>
       <div>
+      </div>
+                  </div>
+              </div>
+            </div>
+            <div class="card-body l1">
+              <div class="card-header">
+                <div class="card-title outline-child">
+                  <div class="node" id="81"><span class="badge log pass-bg mr-2">Pass</span>Home Loan repayment calculator - Owner occupied (principal and interest)</div>
+                </div>
+              </div>
+              <div class="card-body mt-3 collapse">
+                  <div class="step pass-bg">
+                    <span>Given User is on commbank site</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>When User clicks on "Home loans" tab</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And User clicks on "Calculators & tools" link</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And User clicks on Home loan repayments calculator "Calculate now" link</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And User enters "65000" and "10" and "Interest only 3 years" and "1" for Home Loan repayment</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And User clicks on calculate button</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Then User validate "$91,506" and "$26,506" details</span>
+      <div>
+      </div>
+                  </div>
+              </div>
+            </div>
+            <div class="card-body l1">
+              <div class="card-header">
+                <div class="card-title outline-child">
+                  <div class="node" id="91"><span class="badge log pass-bg mr-2">Pass</span>Home Loan repayment calculator - Owner occupied (principal and interest)</div>
+                </div>
+              </div>
+              <div class="card-body mt-3 collapse">
+                  <div class="step pass-bg">
+                    <span>Given User is on commbank site</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>When User clicks on "Home loans" tab</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And User clicks on "Calculators & tools" link</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And User clicks on Home loan repayments calculator "Calculate now" link</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And User enters "43000" and "20" and "Interest only 2 years" and "4" for Home Loan repayment</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And User clicks on calculate button</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Then User validate "$71,468" and "$28,468" details</span>
+      <div>
+      </div>
+                  </div>
+              </div>
+            </div>
+            <div class="card-body l1">
+              <div class="card-header">
+                <div class="card-title outline-child">
+                  <div class="node" id="101"><span class="badge log fail-bg mr-2">Fail</span>Home Loan repayment calculator - Owner occupied (principal and interest)</div>
+                </div>
+              </div>
+              <div class="card-body mt-3 ">
+                  <div class="step pass-bg">
+                    <span>Given User is on commbank site</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>When User clicks on "Home loans" tab</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And User clicks on "Calculators & tools" link</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And User clicks on Home loan repayments calculator "Calculate now" link</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And User enters "29000" and "10" and "Interest only 5 years" and "7" for Home Loan repayment</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And User clicks on calculate button</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step fail-bg">
+                    <span>Then User validate "$43,487" and "$14,48" details</span>
+      <div>
+        <textarea disabled class="code-block">java.lang.AssertionError
+	at org.junit.Assert.fail(Assert.java:87)
+	at org.junit.Assert.assertTrue(Assert.java:42)
+	at org.junit.Assert.assertTrue(Assert.java:53)
+	at stepDefination.RepaymentCalcDef.user_validate_and_details(RepaymentCalcDef.java:107)
+	at ✽.User validate "$43,487" and "$14,48" details(file:///D:/CBA/Repayment%20Calculator/src/test/resources/features/OwnerOccupied.feature:11)
+</textarea>
+      
       </div>
                   </div>
               </div>
@@ -551,15 +883,17 @@ eventsCount: 5,
 <li class="test-item">
 <div class="test-detail">
 <span class="meta">
-<span class='badge log pass-bg'>1</span>
+<span class='badge log pass-bg'>3</span>
+<span class='badge log badge-danger'>1</span>
 </span>
 <p class="name">@Test1</p>
-<p class="duration text-sm">1 tests</p>
+<p class="duration text-sm">4 tests</p>
 </div>
 <div class="test-contents d-none">
 <div class="info">
 <h4>@Test1</h4>
-<span status="pass" class='badge log pass-bg'>1 passed</span>
+<span status="pass" class='badge log pass-bg'>3 passed</span>
+<span status="fail" class='badge log badge-danger'>1 failed</span>
 </div>
 <table class='table table-sm mt-4'>
 <thead>
@@ -572,47 +906,41 @@ eventsCount: 5,
 <tbody>
 <tr class="tag-test-status" status="pass">
 <td><span class="badge log pass-bg">Pass</span></td>
-<td>19:50:37 PM</td>
+<td>15:52:01 PM</td>
 <td>
-<a href="#" class="linked" test-id='27' id='29'>Home Loan repayment calculator - Owner occupied (principal and interest)</a>
+<a href="#" class="linked" test-id='69' id='71'>Home Loan repayment calculator - Owner occupied (principal and interest)</a>
 <div class="">
-<span class="badge badge-default">Commbank - Owner Occupied.Home Loan repayment calculator - Owner occupied (principal and interest)</span>
+<span class="badge badge-default">Commbank - Owner occupied.Home Loan repayment calculator - Owner occupied (principal and interest)</span>
 </div>
 </td>
 </tr>
-</tbody>
-</table>
-</div>
-</li>
-<li class="test-item">
-<div class="test-detail">
-<span class="meta">
-<span class='badge log pass-bg'>1</span>
-</span>
-<p class="name">@Test2</p>
-<p class="duration text-sm">1 tests</p>
-</div>
-<div class="test-contents d-none">
-<div class="info">
-<h4>@Test2</h4>
-<span status="pass" class='badge log pass-bg'>1 passed</span>
-</div>
-<table class='table table-sm mt-4'>
-<thead>
-<tr>
-<th class="status-col">Status</th>
-<th class="timestamp-col">Timestamp</th>
-<th>TestName</th>
-</tr>
-</thead>
-<tbody>
 <tr class="tag-test-status" status="pass">
 <td><span class="badge log pass-bg">Pass</span></td>
-<td>19:50:02 PM</td>
+<td>15:52:31 PM</td>
 <td>
-<a href="#" class="linked" test-id='15' id='17'>Home Loan repayment calculator - Investment (principal and interest)</a>
+<a href="#" class="linked" test-id='69' id='81'>Home Loan repayment calculator - Owner occupied (principal and interest)</a>
 <div class="">
-<span class="badge badge-default">Commbank - Investment.Home Loan repayment calculator - Investment (principal and interest)</span>
+<span class="badge badge-default">Commbank - Owner occupied.Home Loan repayment calculator - Owner occupied (principal and interest)</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>15:53:18 PM</td>
+<td>
+<a href="#" class="linked" test-id='69' id='91'>Home Loan repayment calculator - Owner occupied (principal and interest)</a>
+<div class="">
+<span class="badge badge-default">Commbank - Owner occupied.Home Loan repayment calculator - Owner occupied (principal and interest)</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>15:53:44 PM</td>
+<td>
+<a href="#" class="linked" test-id='69' id='101'>Home Loan repayment calculator - Owner occupied (principal and interest)</a>
+<div class="">
+<span class="badge badge-default">Commbank - Owner occupied.Home Loan repayment calculator - Owner occupied (principal and interest)</span>
 </div>
 </td>
 </tr>
@@ -623,15 +951,15 @@ eventsCount: 5,
 <li class="test-item">
 <div class="test-detail">
 <span class="meta">
-<span class='badge log pass-bg'>1</span>
+<span class='badge log pass-bg'>2</span>
 </span>
 <p class="name">@Test3</p>
-<p class="duration text-sm">1 tests</p>
+<p class="duration text-sm">2 tests</p>
 </div>
 <div class="test-contents d-none">
 <div class="info">
 <h4>@Test3</h4>
-<span status="pass" class='badge log pass-bg'>1 passed</span>
+<span status="pass" class='badge log pass-bg'>2 passed</span>
 </div>
 <table class='table table-sm mt-4'>
 <thead>
@@ -644,11 +972,139 @@ eventsCount: 5,
 <tbody>
 <tr class="tag-test-status" status="pass">
 <td><span class="badge log pass-bg">Pass</span></td>
-<td>19:49:25 PM</td>
+<td>15:47:53 PM</td>
 <td>
 <a href="#" class="linked" test-id='1' id='3'>Home Loan repayment calculator - Input Interest Rate</a>
 <div class="">
-<span class="badge badge-default">Commbank - InputInterestRate.Home Loan repayment calculator - Input Interest Rate</span>
+<span class="badge badge-default">CommBank - Repayment Calculator.Home Loan repayment calculator - Input Interest Rate</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>15:48:40 PM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='15'>Home Loan repayment calculator - Input Interest Rate</a>
+<div class="">
+<span class="badge badge-default">CommBank - Repayment Calculator.Home Loan repayment calculator - Input Interest Rate</span>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log pass-bg'>4</span>
+</span>
+<p class="name">@Test2</p>
+<p class="duration text-sm">4 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>@Test2</h4>
+<span status="pass" class='badge log pass-bg'>4 passed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>15:49:21 PM</td>
+<td>
+<a href="#" class="linked" test-id='27' id='29'>Home Loan repayment calculator - Investment (principal and interest)</a>
+<div class="">
+<span class="badge badge-default">CommBank - Repayment Calculator - Investment.Home Loan repayment calculator - Investment (principal and interest)</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>15:50:12 PM</td>
+<td>
+<a href="#" class="linked" test-id='27' id='39'>Home Loan repayment calculator - Investment (principal and interest)</a>
+<div class="">
+<span class="badge badge-default">CommBank - Repayment Calculator - Investment.Home Loan repayment calculator - Investment (principal and interest)</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>15:50:41 PM</td>
+<td>
+<a href="#" class="linked" test-id='27' id='49'>Home Loan repayment calculator - Investment (principal and interest)</a>
+<div class="">
+<span class="badge badge-default">CommBank - Repayment Calculator - Investment.Home Loan repayment calculator - Investment (principal and interest)</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>15:51:31 PM</td>
+<td>
+<a href="#" class="linked" test-id='27' id='59'>Home Loan repayment calculator - Investment (principal and interest)</a>
+<div class="">
+<span class="badge badge-default">CommBank - Repayment Calculator - Investment.Home Loan repayment calculator - Investment (principal and interest)</span>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<div class="test-content scrollable">
+<div class="test-content-detail">
+<div class="detail-body"></div>
+</div>
+</div>
+</div><div class="test-wrapper row view exception-view attributes-view">
+<div class="test-list">
+<div class="test-list-tools">
+<ul class="tools pull-left"><li><a href=""><span class="font-size-14">Exception</span></a></li></ul>
+<ul class="tools text-right"><li><a href="#"><span class="badge badge-primary">1</span></a></li></ul>
+</div>
+<div class="test-list-wrapper scrollable">
+<ul class="test-list-item">
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log badge-danger'>1</span>
+</span>
+<p class="name">java.lang.AssertionError</p>
+<p class="duration text-sm">1 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>java.lang.AssertionError</h4>
+<span status="fail" class='badge log badge-danger'>1 failed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>15:54:09 PM</td>
+<td>
+<a href="#" class="linked" test-id='69' id='109'>Then User validate "$43,487" and "$14,48" details</a>
+<div class="">
+<span class="badge badge-default">Commbank - Owner occupied.Home Loan repayment calculator - Owner occupied (principal and interest).Then User validate "$43,487" and "$14,48" details</span>
 </div>
 </td>
 </tr>

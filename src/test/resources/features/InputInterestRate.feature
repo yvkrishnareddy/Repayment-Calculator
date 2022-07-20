@@ -1,4 +1,4 @@
-Feature: Commbank - InputInterestRate
+Feature: CommBank - Repayment Calculator
 
   @Test3
   Scenario Outline: Home Loan repayment calculator - Input Interest Rate
@@ -13,6 +13,6 @@ Feature: Commbank - InputInterestRate
     Then User validate "<Expected Total loan repayments>" and "<Expected Total interest charged>" details
 
     Examples:
-      | LoanAmount | Term | Repayment Type        | With an IRO | | Expected Total loan repayments | Expected Total interest charged |
-      |      50000 |   20 | Interest only 1 year  |           2 | | $61,142                        | $11,142                         |
-      #|      40000 |   30 | Interest only 2 years |           3 | | $61,572                        | $21,572                         |
+      | LoanAmount | Term | Repayment Type        | With an IRO |Expected Total loan repayments | Expected Total interest charged |
+      |      50000 |   20 | Interest only 1 year  |           2 | $61,142 											| $11,142 											  |
+      |      40000 |   30 | Interest only 2 years |           3 | $61,572 											|	$21,572 												|

@@ -10,7 +10,6 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class BasePage {
 
@@ -36,7 +35,13 @@ public class BasePage {
 	}
 
 	public static WebElement findObject(By ele, String selector) {
-		WebDriverWait wait = new WebDriverWait(driver, 30);
+		WebDriverWait wait = new WebDriverWait(driver, 10);
+		WebElement wEle =  wait.until(ExpectedConditions.presenceOfElementLocated(ele));
+		return wEle;
+	}
+
+	public static WebElement findObject1(By ele, String selector) {
+		WebDriverWait wait = new WebDriverWait(driver, 5);
 		WebElement wEle =  wait.until(ExpectedConditions.presenceOfElementLocated(ele));
 		return wEle;
 	}

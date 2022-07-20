@@ -1,4 +1,4 @@
-Feature: Commbank - Investment
+Feature: CommBank - Repayment Calculator - Investment
 
   @Test2
   Scenario Outline: Home Loan repayment calculator - Investment (principal and interest)
@@ -12,7 +12,7 @@ Feature: Commbank - Investment
 
     Examples:
       | LoanAmount | Term | Repayment Type        | With a  | Expected Total loan repayments | Expected Total interest charged |
-      |      50000 |   20 | Interest only 1 year  | 7774124 | $67,994                        | $17,994                         |
-     # |      45000 |   30 | Interest only 3 years |       8 | $98,177                        | $53,177                         |
-      #|      35000 |   20 | Interest only 1 year  |      10 | $57,013                        | $22,013                         |
-      #|      45000 |   35 | Interest only 5 years |      14 | $96,407                        | $51,407                         |
+      |      50000 |   20 | Interest only 1 year  | 7774124 | $71,124                        | $21,124                         |
+      |      40000 |   25 | Interest only 2 years |       8 | $81,682                        | $41,682                         |
+      |      60000 |   30 | Interest only 3 years |      10 | $127,901                       | $67,901                         |
+      |      55000 |   20 | Interest only 5 years |      14 | $101,475                       | $46,475                         |

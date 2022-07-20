@@ -18,38 +18,34 @@ public class RepaymentCalcPage extends BasePage{
 	public static final By byBanner = findBy("//div//span//a[contains(text(), 'Dismiss')]");
 
 	public static void clickOnHomeLoansTab(String data) throws InterruptedException {
-		if(findObject(byBanner, "Banner").isDisplayed()) {
+		/*if(findObject(byBanner, "Banner").isDisplayed()) {
 			driver.findElement(By.xpath("//span//a[contains(text(), 'Dismiss')]")).click();
 		}else{
 			System.out.println("INFO: Banner is not displayed");
-		}
+		}*/
 		By byHomeLoans = findBy("(//li//a[contains(text(), '"+data+"')])[1]");
 		clickElement(byHomeLoans, "Home Loans");
 		Thread.sleep(2000);
-
 	}
 
 	public static void clickOnCalculatorsAndTools(String data) throws InterruptedException {
-		if(findObject(byBanner, "Banner").isDisplayed()) {
-			driver.findElement(By.xpath("//span//a[contains(text(), 'Dismiss')]")).click();
+		/*if(findObject(byBanner, "Banner").isDisplayed()) {
+		driver.findElement(By.xpath("//span//a[contains(text(), 'Dismiss')]")).click();
 		}else{
 			System.out.println("INFO: Banner is not displayed");
-		}
-		Thread.sleep(2000);
+		}*/
 		By byCalculatorsAndTools = findBy("(//li//a[@data-tracker-id='default_0_4'])[1]");
 		clickElement(byCalculatorsAndTools, "Calculators And Tools");
-		Thread.sleep(2000);
 	}
 
-	public static void clickOnCalculateNow(String data) throws InterruptedException{
-		if(findObject(byBanner, "Banner").isDisplayed()) {
-			driver.findElement(By.xpath("//span//a[contains(text(), 'Dismiss')]")).click();
+	public static void clickOnCalculateNow(String data) {
+		/*if(findObject(byBanner, "Banner").isDisplayed()) {
+		driver.findElement(By.xpath("//span//a[contains(text(), 'Dismiss')]")).click();
 		}else{
 			System.out.println("INFO: Banner is not displayed");
-		}
+		}*/
 		By byCalculateNow = findBy("(//p//a[@aria-label='"+data+"'])[2]");
 		clickElement(byCalculateNow, "Calculate Now");
-		Thread.sleep(2000);
 		driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 	}
 
@@ -110,12 +106,12 @@ public class RepaymentCalcPage extends BasePage{
 
 	public static void clearInputInterestRate() {
 		driver.findElement(By.xpath("//input[@id='customRate']")).clear();
-		driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 	}
 
 	public static void setInputInterestRate(String text) {
 		driver.findElement(By.xpath("//input[@id='customRate']")).sendKeys(text);
-		driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 		System.out.println("INFO: Entered input interest rate is : " +text);
 	}
 }
