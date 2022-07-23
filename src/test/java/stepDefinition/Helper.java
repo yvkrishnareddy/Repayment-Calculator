@@ -1,4 +1,4 @@
-package stepDefination;
+package stepDefinition;
 
 import io.cucumber.java.After;
 import io.cucumber.java.Before;
@@ -19,9 +19,9 @@ public class Helper extends BasePage{
 
 	@After
 	public void closeSetup() {
-		System.out.println("INFO: Inside CloseSetup");
+		System.out.println("INFO: Inside CloseSetup...closing the browser");
 		driver.quit();
-		System.out.println("INFO: CloseSetup Done");
-		System.out.println("************* END TEST ************");
+		System.out.println("INFO: Browser closed Done");
+		System.out.println("************* END OF THE TEST CASE************");
 	}
 }

@@ -2,7 +2,7 @@ Feature: CommBank - Repayment Calculator
 
   @Test3
   Scenario Outline: Home Loan repayment calculator - Input Interest Rate
-    Given User is on commbank site
+    Given User is on landing page of the CBA website
     When User clicks on "Home loans" tab
     And User clicks on "Calculators & tools" link
     And User clicks on Home loan repayments calculator "Calculate now" link
@@ -15,4 +15,4 @@ Feature: CommBank - Repayment Calculator
     Examples:
       | LoanAmount | Term | Repayment Type        | With an IRO |Expected Total loan repayments | Expected Total interest charged |
       |      50000 |   20 | Interest only 1 year  |           2 | $61,142 											| $11,142 											  |
- #     |      40000 |   30 | Interest only 2 years |           3 | $61,572 											|	$21,572 												|
+ #    |      40000 |   30 | Interest only 2 years |           3 | $61,572 											|	$21,572 												|
