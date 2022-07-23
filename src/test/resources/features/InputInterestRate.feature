@@ -15,4 +15,4 @@ Feature: CommBank - Repayment Calculator
     Examples:
       | LoanAmount | Term | Repayment Type        | With an IRO |Expected Total loan repayments | Expected Total interest charged |
       |      50000 |   20 | Interest only 1 year  |           2 | $61,142 											| $11,142 											  |
-      |      40000 |   30 | Interest only 2 years |           3 | $61,572 											|	$21,572 												|
+ #     |      40000 |   30 | Interest only 2 years |           3 | $61,572 											|	$21,572 												|

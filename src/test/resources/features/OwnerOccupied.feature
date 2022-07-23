@@ -13,6 +13,6 @@ Feature: Commbank - Owner occupied
     Examples:
       | LoanAmount | Term | Repayment Type        | With a  | Expected Total loan repayments | Expected Total interest charged |
       |      45000 |   30 | Interest only 1 year  | 7774123 | $71,620                        | $26,620                         |
-      |      65000 |   10 | Interest only 3 years |       1 | $91,506                        | $26,506                         |
-      |      43000 |   20 | Interest only 2 years |       4 | $71,468                        | $28,468                         |
-      |      29000 |   10 | Interest only 5 years |       7 | $43,487                        | $14,48		                       |
+  #    |      65000 |   10 | Interest only 3 years |       1 | $91,506                        | $26,506                         |
+  #    |      43000 |   20 | Interest only 2 years |       4 | $71,468                        | $28,468                         |
+  #    |      29000 |   10 | Interest only 5 years |       7 | $43,487                        | $14,48		                       |
